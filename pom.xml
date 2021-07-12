@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>app.github.charleech</groupId>    
+    <artifactId>echo-servlet</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <packaging>war</packaging>
+
+    <name>echo-servlet</name>
+
+    <url>${my.project.url}</url>
+   
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <my.project.description>
+            This is a project which provide the demonstration for printing the request
+        </my.project.description>
+        <my.project.inception.year>2021</my.project.inception.year>
+        <my.project.url>https://github.com/charleech/echo-servle</my.project.url>
+        <my.project.git.url>https://github.com/charleech/echo-servle</my.project.git.url>
+
+        <my.maven.war.version>3.3.1</my.maven.war.version>
+        <my.maven.compiler.version>3.8.1</my.maven.compiler.version>
+        
+        <my.java.version>1.8</my.java.version>
+        <my.jakartaee.version>8.0.0</my.jakartaee.version>
+        
+        <my.commons.io.version>2.8.0</my.commons.io.version>
+        <my.commons.lang.version>3.12.0</my.commons.lang.version>
+    </properties>
+
+    <description>${my.project.description}</description>
+
+    <inceptionYear>${my.project.inception.year}</inceptionYear>
+
+    <repositories>
+        <repository>
+            <id>maven-central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://github.com/charleech/echo-servlet/blob/main/LICENSE</url>
+            <distribution>repo</distribution>
+            <comments>Echo Servlet</comments>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>
+            scm:git:${my.project.git.url}
+        </connection>
+        <developerConnection>
+            scm:git:${my.project.git.url}
+        </developerConnection>
+        <url>${my.project.gitlab.url}</url>
+    </scm>
+    
+    <developers>
+        <developer>
+            <id>charlee.ch</id>
+            <name>Charlee Chitsuk</name>
+            <email>charlee.ch@gmail.com</email>
+            <url>http://th.gravatar.com/charleech</url>
+            <timezone>+7</timezone>
+            <properties>
+                <picUrl>http://th.gravatar.com/charleech</picUrl>
+            </properties>
+        </developer>
+    </developers>
+    
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${my.maven.war.version}</version>
+                    <configuration>
+                        <attachClasses>false</attachClasses>
+                        <archiveClasses>false</archiveClasses>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${my.maven.compiler.version}</version>
+                    <configuration>
+                        <source>${my.java.version}</source>
+                        <target>${my.java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <showDeprecation>true</showDeprecation>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-war</id>
+                        <phase>none</phase>
+                    </execution>
+                    <execution>
+                        <id>microprofile-webapp</id>
+                        <goals>
+                            <goal>war</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+			<dependency>
+				<groupId>jakarta.platform</groupId>
+				<artifactId>jakarta.jakartaee-api</artifactId>
+				<version>${my.jakartaee.version}</version>
+			</dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${my.commons.io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${my.commons.lang.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+	    <dependency>
+	        <groupId>jakarta.platform</groupId>
+	        <artifactId>jakarta.jakartaee-api</artifactId>
+	        <scope>provided</scope>
+	    </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>
