@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2021-2021 By Charlee Chitsuk
+
+    All rights reserved. No part of this program and the accompanying
+    materials may be reproduced, distributed, or transmitted in
+    any form or by any means, including photocopying, recording, or
+    other electronic or mechanical methods, without the prior written
+    permission of the publisher, except in the case of brief quotations
+    embodied in critical reviews and certain other noncommercial uses
+    permitted by copyright law. For permission requests, write to the
+    publisher, addressed "Attention: Permissions Coordinator," at the
+    address below.
+
+    Charlee Chitsuk
+
+    Summit Computer Co.,Ltd.
+    109 C.C.T. Building, 12th Floor,
+    Surawong Road, Suriyawong,
+    Bangrak, Bangkok,
+    Thailand. 10500.
+
+    Tel. 66-2-237-6922 to 3, 66-2-238-0895 to 9
+    Fax: 66-2-236-7392
+    email: charlee@summitthai.com
+    website: http://www.summitthai.com
+
+-->
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 4 Servlet 3.0//EN" "https://raw.githubusercontent.com/payara/Payara-Server-Documentation/master/schemas/payara-web-app_4.dtd">
+<payara-web-app>
+    <context-root>/</context-root>
+    <class-loader delegate="false"/>
+    <parameter-encoding default-charset="UTF-8"/>
+</payara-web-app>
