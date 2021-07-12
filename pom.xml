@@ -20,8 +20,8 @@
             This is a project which provide the demonstration for printing the request
         </my.project.description>
         <my.project.inception.year>2021</my.project.inception.year>
-        <my.project.url>https://github.com/charleech/echo-servle</my.project.url>
-        <my.project.git.url>https://github.com/charleech/echo-servle</my.project.git.url>
+        <my.project.url>https://github.com/charleech/echo-servlet</my.project.url>
+        <my.project.git.url>https://github.com/charleech/echo-servlet</my.project.git.url>
 
         <my.maven.war.version>3.3.1</my.maven.war.version>
         <my.maven.compiler.version>3.8.1</my.maven.compiler.version>
