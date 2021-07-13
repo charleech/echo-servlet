@@ -159,8 +159,14 @@ public class Echo extends HttpServlet {
                 bldr.append(
                     this.getTextHeader("The Request Parameter")
                 ).
-                append(this.getParameters(req));
+                append(
+                    this.mapToString(
+                        this.getParameters(req)
+                    )
+                );
             }
+
+            bldr.append(this.getTextHeader("End of response"));
 
             this.manageResponse(
                 res,
